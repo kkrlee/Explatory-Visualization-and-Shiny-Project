@@ -1,0 +1,38 @@
+---
+title: "Analyzing Forest Fire Data"
+author: "Minjae Lee"
+date: '2020 8 3 '
+output: html_document
+---
+
+Import the data file. Save it as a data frame. 
+
+```{r}
+forest_fires = read_csv("forestfires.csv")
+```
+
+
+Create a bar chart showing the number of forest fires occuring during each month
+```{r}
+fires_by_month = forest_fires %>%
+  group_by(month) %>%
+  summarize(total_fires = n())
+ggplot(data = fires_by_month) +
+  aes(x = month, y = total_fires) +
+  geom_bar(stat = "identity")  +
+  theme(panel.background = element_rect(fill = "white"), 
+        axis.line = element_line(size = 0.25, 
+                                 colour = "black"))
+```
+
+
+
+
+
+
+
+
+
+
+
+

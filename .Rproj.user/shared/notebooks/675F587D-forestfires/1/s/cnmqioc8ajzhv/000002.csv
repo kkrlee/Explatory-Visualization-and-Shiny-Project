@@ -1,0 +1,18 @@
+"0","forest_fires = read_csv(""forestfires.csv"")"
+"2","Parsed with column specification:
+cols(
+  X = [32mcol_double()[39m,
+  Y = [32mcol_double()[39m,
+  month = [31mcol_character()[39m,
+  day = [31mcol_character()[39m,
+  FFMC = [32mcol_double()[39m,
+  DMC = [32mcol_double()[39m,
+  DC = [32mcol_double()[39m,
+  ISI = [32mcol_double()[39m,
+  temp = [32mcol_double()[39m,
+  RH = [32mcol_double()[39m,
+  wind = [32mcol_double()[39m,
+  rain = [32mcol_double()[39m,
+  area = [32mcol_double()[39m
+)
+"
