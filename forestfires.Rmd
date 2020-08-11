@@ -24,7 +24,6 @@ forest_fires = forest_fires %>%
          day = factor(day, levels = c("sun", "mon", "tue", "wed", "thu", "fri", "sat")))
 ## once have reordered the months and days of the week, you can re-run the bar chart code above
 # to create new bar graphs
-
 ```
 
 Create a bar chart showing the number of forest fires occuring during each month
@@ -67,7 +66,6 @@ create_boxplots = function(x, y) {
     geom_boxplot() +
     theme(panel.background = element_rect(fill = "white"))
 }
-
 ## Assign x and y variable names 
 x_var_month = names(forest_fires)[3] ## month
 x_var_day = names(forest_fires)[4] ## day
@@ -75,7 +73,6 @@ y_var = names(forest_fires)[5:12]
 ## use the map() function to apply the function to the variables of interest
 map2(x_var_month, y_var, create_boxplots) ## visualize variables by month
 map2(x_var_day, y_var, create_boxplots) ## visualize variables by day
-
 ```
 
 
@@ -95,12 +92,3 @@ y_var_scatter = names(forest_fires)[13]
 ## use the map() function to apply the function to the variables of interest
 map2(x_var_scatter, y_var_scatter, create_scatterplots)
 ```
-
-
-
-
-
-
-
-
-
